@@ -90,4 +90,4 @@ run it on cloud with AWS Elastic Beanstalk
 ``` bash
 > eb create shoppers-serving-env
 ```    
-- output a URL copy it
+- output a URL 
