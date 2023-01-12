@@ -1,6 +1,6 @@
 import requests
 
-# link generated from elastic beanstalk
+# Link generated from elastic beanstalk
 host = "shoppers-serving-env.eba-ufuepc2p.us-east-1.elasticbeanstalk.com"
 url = f'http://{host}/predict'
 

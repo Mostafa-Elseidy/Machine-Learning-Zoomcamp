@@ -7,7 +7,7 @@ from sklearn.feature_extraction import DictVectorizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import roc_auc_score
 
-# load data
+# Load data
 df = pd.read_csv('online_shoppers_intention.csv')
 
 # data preparation

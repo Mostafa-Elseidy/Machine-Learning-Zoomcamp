@@ -66,7 +66,7 @@ Built a cloud-based service to predict whether the shoppers will purchase or not
 ├── Pipfile
 ├── Pipfile.lock
 ├── README.md
-├── Screenshots 
+├── Screenshots                     
 ├── lr_model.bin                    <- pickled model
 ├── online_shoppers_intention.csv   <- dataset
 ├── predict-test-cloud.py           <- cloud test sample
@@ -76,21 +76,6 @@ Built a cloud-based service to predict whether the shoppers will purchase or not
 └── train.py                        <- script to train the model
 ```
 -----------------------------  
-## Requirements
-```
-[packages]
-numpy = "*"
-scikit-learn = "==1.1.1"
-flask = "*"
-gunicorn = "*"
-
-[dev-packages]
-awsebcli = "*"
-
-[requires]
-python_version = "3.9"
-python_full_version = "3.9.13"
-````
 ## Try it!
 run the web app locally on Ubuntu
 ``` bash 
