@@ -45,16 +45,37 @@ The 'Revenue' attribute can be used as the class label. (more about features ins
 [Link](https://archive.ics.uci.edu/ml/datasets/Online+Shoppers+Purchasing+Intention+Dataset)
 
 ----------------------
-## Objective
+## Objective       
 Built a cloud-based service to predict whether the shoppers will purchase or not based on the their activity.
+    
 ----------------------
 ## Steps
 - EDA and ML modeling
-- Dependency and enviroment management
+    - Python and Jupiter notebook
+- Dependency and environment management
+    - Conda, pipenv
 - Deployment 
+    - Flask
 - Containerization
+    - Docker
 - Cloud deployment
-----------------------    
+    - AWS Elastic Beanstalk
+----------------------  
+``` 
+├── Dockerfile
+├── Pipfile
+├── Pipfile.lock
+├── README.md
+├── Screenshots 
+├── lr_model.bin                    <- pickled model
+├── online_shoppers_intention.csv   <- dataset
+├── predict-test-cloud.py           <- cloud test sample
+├── predict-test.py                 <- local test sample
+├── predict.py                      <- Flask app
+├── shoppers.ipynb                  <- ML notebook
+└── train.py                        <- script to train the model
+```
+-----------------------------  
 ## Requirements
 ```
 [packages]
@@ -70,3 +91,18 @@ awsebcli = "*"
 python_version = "3.9"
 python_full_version = "3.9.13"
 ````
+## Try it!
+run the web app locally on Ubuntu
+``` bash 
+> gunicorn --bind=0.0.0.0:9696 predict:app
+```
+run it with docker
+``` bash
+> docker run -it --rm --entrypoint=bash shoppers-img
+> docker run -it --rm -p 9696:9696 shoppers-img
+```
+run it on cloud with AWS Elastic Beanstalk
+``` bash
+> eb create shoppers-serving-env
+```    
+- output a URL copy it
